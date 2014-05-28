@@ -1,0 +1,37 @@
+{
+    "name": "szCascadingSelect",
+    "title": "jQuery szCascadingSelect",
+    "description": "jQuery Unlimited Cascading Selectbox  plugin",
+    "keywords": [
+        "selectbox",
+        "unlimited",
+	"cascading",
+	"cascade",
+	"step"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Kim duhwan",
+        "url": "http://bytestream.kr"
+    },
+    "maintainers": [
+        {
+            "name": "Kim duhwan",
+            "email": "netphantom@hanmail.net",
+            "url": "http://bytestream.kr"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://bytestream.kr/szCascadingSelect/license.html"
+        }
+    ],
+    "homepage": "http://bytestream.kr/szCascadingSelect",
+    "demo": "http://bytestream.kr/szCascadingSelect/demo.html",
+    "docs": "http://bytestream.kr/szCascadingSelect/documentation.html",
+    "download": "http://bytestream.kr/szCascadingSelect/szCascadingSelect.zip",
+    "dependencies": {
+        "jquery": ">=1.9"
+    }
+}

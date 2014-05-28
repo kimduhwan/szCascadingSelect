@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>Documentation</TITLE>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<style type="text/css">
+body{font-family:Courier New;}
+.code{border:gray 1px solid;background:#efefef;padding-left:10px;width:1000px;}
+table{border:none;border:gray 1px solid;border-collapse:collapse}
+td{border:gray 1px solid;padding:5px}
+table thead td{font-weight:bold;background:#efefef}
+
+.emp{color:red}
+.emp2{color:green}
+.emp3{color:blue;font-weight:bold}
+</style>
+</HEAD>
+
+<BODY>
+<h3>Documentation (jquery.szCascadingSelect.js)</h3>
+
+
+
+<ul>
+<li><a href="index.html">Index</a></li>
+<li><a href="demo.html">Demo</a></li>
+<li><a href="szCascadingSelect.zip">ZipFile Download</a></li>
+</ul>
+
+
+<h4>1.KeyType : ref (Reference) *******************************</h4>
+
+<h5>Step1 . Add the following markup to your document &lt;head&gt;</h5>
+
+<div class="code"><xmp><script src="jquery1.9.1.js"></script>
+<script src="jquery.szCascadingSelect.js"></script></xmp>
+</div>
+
+
+<h5>Step2 . Add the following markup to your document &lt;body&gt;</h5>
+
+<div class="code"><pre>&lt;select id="<span class='emp3'>step00</span>" name="step00" <span class='emp2'>data-selbox</span>="<span class='emp'>step10,step20</span>"&gt;&lt;option value=''&gt;- First Step -&lt;/option&gt;&lt;/select&gt;
+&lt;select id="<span class='emp'>step10</span>" name="step10"&gt;&lt;option value=''&gt;- Second Step -&lt;/option&gt;&lt;/select&gt;
+&lt;select id="<span class='emp'>step20</span>" name="step20"&gt;&lt;option value=''&gt;- Third Step -&lt;/option&gt;&lt;/select&gt;</pre>
+</div>
+
+
+<h5>Step3 . Add the following markup to your document &lt;head&gt;</h5>
+
+<div class="code"><pre>&lt;script&gt;
+$(document).ready(function(){
+	
+	//definition of reference key & value
+	var <span class='emp'>item0</span> = {
+		"FD":"Food","EL":"Electronics"
+	};
+	var <span class='emp'>item1</span> = {
+		"01":["Beverage","FD"],"02":["Health Food","FD"],
+		"03":["Computer","EL"],"04":["Refrigerator","EL"]		  
+	
+	};
+
+	var <span class='emp'>item3</span> = {
+		"AA":["Carbonated drinks","01"],"AB":["Juice","01"],"AC":["Soybean Milk","01"],
+		"BA":["Red Ginseng","02"],"BB":["Honey","02"],
+		"CA":["Notebook Computer","03"],"CB":["Desktop Computer","03"],
+		"DA":["General Refrigerator","04"],"DB":["Kimchi Refrigerator","04"]
+	};
+
+	$("<span class='emp3'>#step00</span>").szCascadingSelect({<span class='emp2'>items</span>:[<span class='emp'>item0, item1, item2</span>]})
+});
+&lt;/script&gt;</pre></div>
+
+
+<br/><br/>
+
+<h4>2.KeyType : single ***************************************</h4>
+
+<h5>Step1 . Add the following markup to your document &lt;head&gt;</h5>
+
+<div class="code"><xmp><script src="jquery1.9.1.js"></script>
+<script src="jquery.szCascadingSelect.js"></script></xmp>
+</div>
+
+
+<h5>Step2 . Add the following markup to your document &lt;body&gt;</h5>
+
+<div class="code"><pre>&lt;select id="<span class='emp3'>step0</span>" name="step0" <span class='emp2'>data-selbox</span>="<span class='emp'>step1,step2</span>"&gt;&lt;option value=''&gt;- Sido -&lt;/option&gt;&lt;/select&gt;
+&lt;select id="<span class='emp'>step1</span>" name="step1"&gt;&lt;option value=''&gt;- Gugun -&lt;/option&gt;&lt;/select&gt;
+&lt;select id="<span class='emp'>step2</span>" name="step2"&gt;&lt;option value=''&gt;- DongMyeon -&lt;/option&gt;</pre>
+</div>
+
+
+<h5>Step3 . Add the following markup to your document &lt;head&gt;</h5>
+
+<div class="code"><pre>&lt;script&gt;
+$(document).ready(function(){
+	
+	//definition of  key & value
+	var <span class='emp'>addr</span> = [
+		{<span class='emp'>code</span>:"803-456",val:"Gyeonggi-do,Gwacheon-si,Galhyeon-dong"},
+		{code:"803-750",val:"Gyeonggi-do,Gwacheon-si,Gwanmun-dong"},
+		{code:"805-123",val:"Gyeonggi-do,Gwacheon-si,Burim-dong"},
+		{code:"805-752",val:"Gyeonggi-do,Gwangmyeong-si,Okgil-dong"},
+		{code:"805-990",val:"Gyeonggi-do,Gwangmyeong-si,Iljik-dong"},
+		{code:"806-120",val:"Gyeonggi-do,Guri-si,Galmae-dong"},
+		{code:"806-250",val:"Gyeonggi-do,Guri-si,Gyomun-dong"},
+		{code:"710-335",val:"Gangwon-do,Gangneung-si,Gangdong-myeon"},
+		{code:"710-339",val:"Gangwon-do,Gangneung-si,Nammun-dong"},
+		{code:"720-100",val:"Gangwon-do,Donghae-si,Dongho-dong"},
+		{code:"720-300",val:"Gangwon-do,Donghae-si,Songjeong-dong"},
+		{code:"720-305",val:"Gangwon-do,Donghae-si,Yongjeong-dong"}
+	];
+
+	$("#<span class='emp3'>step0</span>").szCascadingSelect({item:<span class='emp'>addr</span>,keyType:"single",singleKey:"<span class='emp'>code</span>"});
+});
+&lt;/script&gt;</pre></div>
+
+
+
+
+
+<h5>Optional Parameters</h5>
+<table width="1000" border="1">
+<thead>
+  <tr>
+    <td width="128">property</td>
+    <td width="101">default</td>
+    <td width="549">Description</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>keyType</td>
+    <td>ref</td>
+    <td>single : use single variable composed with key and value<br/>
+	    ref : use multiple variables 
+		
+	</td>
+  </tr>
+  <tr>
+    <td>delimiter</td>
+    <td>comma(,)</td>
+    <td>The delimiter of val in case keyType is single</td>
+  </tr>
+  <tr>
+    <td>items</td>
+    <td>[]</td>
+    <td>Data variables name array in case keyType is ref</td>
+  </tr>
+  <tr>
+    <td>item</td>
+    <td></td>
+    <td>Data variable name in case keyType is single</td>
+  </tr>
+  <tr>
+    <td>singleKey</td>
+    <td>cd</td>
+    <td>The keyName String of data variable in case keyTye is single</td>
+  </tr>
+  <tr>
+    <td>singleVal</td>
+    <td>val</td>
+    <td>The ValueName String of data variable in case keyTye is single</td>
+  </tr>
+
+  <tr>
+    <td>data-selbox</td>
+    <td></td>
+    <td>
+	The Id String(separated by comma) of child select box and descendant select box.
+	
+	<br/>
+	not define in plugin-config, but define in html markup</td>
+  </tr>
+  
+</tbody>
+</table>
+
+
+
+</BODY>
+</HTML>
