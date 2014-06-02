@@ -9,7 +9,7 @@
 	"cascade",
 	"step"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": {
         "name": "Kim duhwan",
         "url": "http://bytestream.kr"
@@ -30,7 +30,7 @@
     "homepage": "http://bytestream.kr/szCascadingSelect",
     "demo": "http://bytestream.kr/szCascadingSelect/demo.html",
     "docs": "http://bytestream.kr/szCascadingSelect/documentation.html",
-    "download": "http://bytestream.kr/szCascadingSelect/szCascadingSelect.zip",
+    "download": "https://github.com/kimduhwan/szCascadingSelect/archive/master.zip",
     "dependencies": {
         "jquery": ">=1.9"
     }

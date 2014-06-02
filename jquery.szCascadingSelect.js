@@ -6,7 +6,27 @@ MIT License
 Copyright (c) 2014 Kim duhwan ( netphantom@hanmail.net )
 */
 		return this.each(function(){
-			
+			String.prototype.scSplit = function(args){
+				
+				var xx = this.replace(/\s\s+/g,' ');
+				
+				var spec = ["|",".","-","\\"];
+				var dchar = args;
+				for(i=0;i<spec.length;i++){
+					if(args==spec[i]){
+						if(args=="\\"){
+							dchar = "\\\\";
+						}else{
+							dchar = "\\" + spec[i];
+						}
+					}
+				}
+				
+
+				var re = new RegExp(dchar);
+				var y = xx.split(re);
+				return y;	
+			}			
 			
 			function uniqueArray(arr) { 
 				var rtn = [], check = {}, cur_item;
@@ -113,7 +133,7 @@ Copyright (c) 2014 Kim duhwan ( netphantom@hanmail.net )
 				
 				$.each(item,function(idx,json){
 					
-					tmp_arr = json[singleVal].split(delimiter);
+					tmp_arr = json[singleVal].scSplit(delimiter);
 					tmp = tmp_arr[0];
 					
 					if(idx==0){
@@ -156,7 +176,7 @@ Copyright (c) 2014 Kim duhwan ( netphantom@hanmail.net )
 							$.each(item, function(key,json){
 								if(json[singleVal].indexOf(cur_val)==0){
 								
-									tmp_arr = json[singleVal].split(delimiter);
+									tmp_arr = json[singleVal].scSplit(delimiter);
 									tmp = "";
 									for(var k=0;k<=next_step;k++){
 										tmp = (tmp=="")?tmp_arr[k]:tmp + delimiter + tmp_arr[k];
@@ -171,7 +191,7 @@ Copyright (c) 2014 Kim duhwan ( netphantom@hanmail.net )
 							nextItemUniq = uniqueArray(nextItem);
 
 							$.each(nextItemUniq,function(idx,item){
-								tmp_arr = item.split(delimiter);
+								tmp_arr = item.scSplit(delimiter);
 								tmp = tmp_arr[tmp_arr.length-1];
 								if(next_step==stepCnt-1){
 									tmp_data = findJsonKey(baseItem,singleKey,singleVal,item);

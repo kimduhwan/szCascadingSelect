@@ -32,22 +32,22 @@ $(document).ready(function(){
 	};
 	
 	var addr = [
-		{code:"803-456",val:"Gyeonggi-do,Gwacheon-si,Galhyeon-dong"},
-		{code:"803-750",val:"Gyeonggi-do,Gwacheon-si,Gwanmun-dong"},
-		{code:"805-123",val:"Gyeonggi-do,Gwacheon-si,Burim-dong"},
-		{code:"805-752",val:"Gyeonggi-do,Gwangmyeong-si,Okgil-dong"},
-		{code:"805-990",val:"Gyeonggi-do,Gwangmyeong-si,Iljik-dong"},
-		{code:"806-120",val:"Gyeonggi-do,Guri-si,Galmae-dong"},
-		{code:"806-250",val:"Gyeonggi-do,Guri-si,Gyomun-dong"},
-		{code:"710-335",val:"Gangwon-do,Gangneung-si,Gangdong-myeon"},
-		{code:"710-339",val:"Gangwon-do,Gangneung-si,Nammun-dong"},
-		{code:"720-100",val:"Gangwon-do,Donghae-si,Dongho-dong"},
-		{code:"720-300",val:"Gangwon-do,Donghae-si,Songjeong-dong"},
-		{code:"720-305",val:"Gangwon-do,Donghae-si,Yongjeong-dong"}
+		{code:"803-456",val:"Gyeonggi-do.Gwacheon-si.Galhyeon-dong"},
+		{code:"803-750",val:"Gyeonggi-do.Gwacheon-si.Gwanmun-dong"},
+		{code:"805-123",val:"Gyeonggi-do.Gwacheon-si.Burim-dong"},
+		{code:"805-752",val:"Gyeonggi-do.Gwangmyeong-si.Okgil-dong"},
+		{code:"805-990",val:"Gyeonggi-do.Gwangmyeong-si.Iljik-dong"},
+		{code:"806-120",val:"Gyeonggi-do.Guri-si.Galmae-dong"},
+		{code:"806-250",val:"Gyeonggi-do.Guri-si.Gyomun-dong"},
+		{code:"710-335",val:"Gangwon-do.Gangneung-si.Gangdong-myeon"},
+		{code:"710-339",val:"Gangwon-do.Gangneung-si.Nammun-dong"},
+		{code:"720-100",val:"Gangwon-do.Donghae-si.Dongho-dong"},
+		{code:"720-300",val:"Gangwon-do.Donghae-si.Songjeong-dong"},
+		{code:"720-305",val:"Gangwon-do.Donghae-si.Yongjeong-dong"}
 	];
 
 	
-	$("#step0").szCascadingSelect({item:addr,keyType:"single",singleKey:"code"});
+	$("#step0").szCascadingSelect({item:addr,keyType:"single",singleKey:"code",delimiter:"."});
 	$("#step00").szCascadingSelect({items:[item0, item1, item2]});
 	
 
@@ -92,20 +92,20 @@ when last step is determined
 
 <h5>Script Code</h5>
 <div class="code"><xmp>var addr = [
-{code:"803-456",val:"Gyeonggi-do,Gwacheon-si,Galhyeon-dong"},
-		{code:"803-750",val:"Gyeonggi-do,Gwacheon-si,Gwanmun-dong"},
-		{code:"805-123",val:"Gyeonggi-do,Gwacheon-si,Burim-dong"},
-		{code:"805-752",val:"Gyeonggi-do,Gwangmyeong-si,Okgil-dong"},
-		{code:"805-990",val:"Gyeonggi-do,Gwangmyeong-si,Iljik-dong"},
-		{code:"806-120",val:"Gyeonggi-do,Guri-si,Galmae-dong"},
-		{code:"806-250",val:"Gyeonggi-do,Guri-si,Gyomun-dong"},
-		{code:"710-335",val:"Gangwon-do,Gangneung-si,Gangdong-myeon"},
-		{code:"710-339",val:"Gangwon-do,Gangneung-si,Nammun-dong"},
-		{code:"720-100",val:"Gangwon-do,Donghae-si,Dongho-dong"},
-		{code:"720-300",val:"Gangwon-do,Donghae-si,Songjeong-dong"},
-		{code:"720-305",val:"Gangwon-do,Donghae-si,Yongjeong-dong"}
+		{code:"803-456",val:"Gyeonggi-do.Gwacheon-si.Galhyeon-dong"},
+		{code:"803-750",val:"Gyeonggi-do.Gwacheon-si.Gwanmun-dong"},
+		{code:"805-123",val:"Gyeonggi-do.Gwacheon-si.Burim-dong"},
+		{code:"805-752",val:"Gyeonggi-do.Gwangmyeong-si.Okgil-dong"},
+		{code:"805-990",val:"Gyeonggi-do.Gwangmyeong-si.Iljik-dong"},
+		{code:"806-120",val:"Gyeonggi-do.Guri-si.Galmae-dong"},
+		{code:"806-250",val:"Gyeonggi-do.Guri-si.Gyomun-dong"},
+		{code:"710-335",val:"Gangwon-do.Gangneung-si.Gangdong-myeon"},
+		{code:"710-339",val:"Gangwon-do.Gangneung-si.Nammun-dong"},
+		{code:"720-100",val:"Gangwon-do.Donghae-si.Dongho-dong"},
+		{code:"720-300",val:"Gangwon-do.Donghae-si.Songjeong-dong"},
+		{code:"720-305",val:"Gangwon-do.Donghae-si.Yongjeong-dong"}
 	];
-$("#step0").szCascadingSelect({item:addr,keyType:"single",singleKey:"code"});
+$("#step0").szCascadingSelect({item:addr,keyType:"single",singleKey:"code",delimiter:"."});
 </xmp>
 </div>
 
